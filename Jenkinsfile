@@ -1,28 +1,17 @@
-pipeline {
-  agent { label 'linux'}
-  options {
-    skipDefaultCheckout(true)
-  }
+pipeline{
+agent any 
+
   stages{
-    stage('clean workspace') {
-      steps {
-        cleanWs()
-      }
+  
+  stage('testread properties')
+    {
+    echo "Testing read properties done.."
     }
-    stage('checkout') {
-      steps {
-        checkout scm
-      }
-    }
-    stage('terraform') {
-      steps {
-        sh './terraformw apply -auto-approve -no-color'
-      }
-    }
+  
+  
+  
+  
   }
-  post {
-    always {
-      cleanWs()
-    }
-  }
+
+
 }
