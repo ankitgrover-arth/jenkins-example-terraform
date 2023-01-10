@@ -5,7 +5,9 @@ agent any
   
   stage('testread properties')
     {
+      steps{
     echo "Testing read properties done.."
+    }
     }
   
   
