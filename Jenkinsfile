@@ -9,7 +9,7 @@ agent any
     {
       steps{
     echo "Testing read properties done.."
-        proper.each{k,v->
+        props.each{k,v->
           prinltn "The key is ${k} and value is ${v}" 
         }
     }
